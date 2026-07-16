@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ご注文完了｜LUCE DERMA BRIGHT SERUM（POCデモ）</title>
+<style>
+  :root{
+    --cream:#FAF6F2; --cream-deep:#F3E9E2; --ink:#241C1A; --ink-soft:#5A4E49;
+    --rose:#D6455D; --rose-deep:#B22F46; --sage:#7C9885; --sage-deep:#5F7A68;
+    --line:#E7DAD0;
+    --serif:"Hiragino Mincho ProN","Yu Mincho","YuMincho",serif;
+    --sans:"Hiragino Kaku Gothic ProN","Yu Gothic Medium","Yu Gothic","Meiryo",sans-serif;
+  }
+  *{box-sizing:border-box;}
+  body{margin:0;background:var(--cream);color:var(--ink);font-family:var(--sans);line-height:1.8;-webkit-font-smoothing:antialiased;}
+  .wrap{max-width:640px;margin:0 auto;min-height:100vh;background:#fff;box-shadow:0 0 40px rgba(36,28,26,.06);padding:80px 24px 60px;text-align:center;}
+  .check{width:64px;height:64px;border-radius:50%;background:var(--sage);color:#fff;font-size:30px;display:flex;align-items:center;justify-content:center;margin:0 auto 24px;}
+  h1{font-family:var(--serif);font-size:24px;font-weight:600;margin:0 0 12px;}
+  p{color:var(--ink-soft);font-size:14px;}
+  .order-box{background:var(--cream-deep);border-radius:12px;padding:22px;margin:28px 0;text-align:left;}
+  .order-box dl{display:grid;grid-template-columns:auto 1fr;gap:8px 18px;margin:0;font-size:14px;}
+  .order-box dt{color:var(--ink-soft);}
+  .order-box dd{margin:0;font-weight:700;font-variant-numeric:tabular-nums;}
+  .back{display:inline-block;margin-top:10px;color:var(--rose-deep);font-size:13px;}
+  .note{font-size:11px;color:var(--ink-soft);margin-top:40px;}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="check">✓</div>
+  <h1>ご注文ありがとうございました</h1>
+  <p>ご注文を受け付けました。<br>（本ページはPOCデモ用です。実際の決済・出荷は発生しません）</p>
+  <div class="order-box">
+    <dl>
+      <dt>注文番号</dt><dd id="orderNo">-</dd>
+      <dt>お支払い金額</dt><dd id="orderPrice">-</dd>
+    </dl>
+  </div>
+  <a class="back" href="index.html">← トップページに戻る</a>
+  <p class="note">© LUCE公式ショップ（POCデモ／架空ブランド）</p>
+</div>
+
+<script>
+/* maiv-m sales tracking 성과(cv) 태그 — 정적 호스팅이라 서버 치환 대신
+   쿼리스트링(order/price)을 data-args/data-price 로 채워 동적 주입한다.
+   tag.js 는 document.currentScript 의 data-* 속성을 읽는다. */
+(function(){
+  var q = new URLSearchParams(location.search);
+  var orderId = q.get('order') || '';
+  var price = parseInt(q.get('price'), 10);
+
+  document.getElementById('orderNo').textContent = orderId || '不明';
+  document.getElementById('orderPrice').textContent =
+    isNaN(price) ? '不明' : '¥' + price.toLocaleString('ja-JP') + '（税込）';
+
+  if(!orderId) return; /* 주문번호 없이 직접 접근하면 cv 미발송 */
+
+  var s = document.createElement('script');
+  s.src = 'https://sales-tracking-dev-hhlhhgenaq-du.a.run.app/t/tag.js';
+  s.setAttribute('data-p', '42x8gqswauqr');
+  s.setAttribute('data-mode', 'cv');
+  s.setAttribute('data-args', orderId);
+  if(!isNaN(price)) s.setAttribute('data-price', String(price));
+  document.head.appendChild(s);
+})();
+</script>
+</body>
+</html>
