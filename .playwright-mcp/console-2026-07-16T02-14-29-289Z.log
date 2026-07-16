@@ -1,5 +1,0 @@
-[     222ms] [VERBOSE] [DOM] Input elements should have autocomplete attributes (suggested: "current-password"): (More info: https://goo.gl/9p2vKq) %o @ http://127.0.0.1:8377/index.html?cid=localtest-verify-001:0
-[     342ms] [ERROR] Failed to load resource: the server responded with a status of 404 (File not found) @ http://127.0.0.1:8377/favicon.ico:0
-[   24693ms] [ERROR] 注文の保存に失敗しました TypeError: Cannot read properties of undefined (reading 'set')
-    at saveOrder (http://127.0.0.1:8377/index.html?cid=localtest-verify-001:708:24)
-    at async handleSubmit (http://127.0.0.1:8377/index.html?cid=localtest-verify-001:682:5) @ http://127.0.0.1:8377/index.html?cid=localtest-verify-001:683
