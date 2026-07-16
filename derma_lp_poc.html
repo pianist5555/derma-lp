@@ -1,0 +1,763 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LUCE DERMA BRIGHT SERUM｜公式ショップ（POCデモ）</title>
+<style>
+  :root{
+    --cream:#FAF6F2;
+    --cream-deep:#F3E9E2;
+    --ink:#241C1A;
+    --ink-soft:#5A4E49;
+    --rose:#D6455D;
+    --rose-deep:#B22F46;
+    --sage:#7C9885;
+    --sage-deep:#5F7A68;
+    --gold:#B98A4E;
+    --line:#E7DAD0;
+    --white:#FFFFFF;
+    --serif:"Hiragino Mincho ProN","Yu Mincho","YuMincho",serif;
+    --sans:"Hiragino Kaku Gothic ProN","Yu Gothic Medium","Yu Gothic","Meiryo",sans-serif;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    background:var(--cream);
+    color:var(--ink);
+    font-family:var(--sans);
+    line-height:1.8;
+    -webkit-font-smoothing:antialiased;
+  }
+  img,.ph{display:block;width:100%;}
+  a{color:inherit;}
+  .wrap{max-width:640px;margin:0 auto;background:var(--white);box-shadow:0 0 40px rgba(36,28,26,0.06);}
+
+  /* ---- 注意事項バー ---- */
+  .top-bar{
+    background:var(--ink);
+    color:var(--cream);
+    text-align:center;
+    font-size:12px;
+    letter-spacing:.04em;
+    padding:8px 12px;
+  }
+  .top-bar b{color:#F3C9A0;}
+
+  /* ---- プレースホルダー画像 ---- */
+  .ph{
+    display:flex;align-items:center;justify-content:center;
+    color:rgba(36,28,26,0.35);
+    font-family:var(--serif);
+    font-size:13px;
+    letter-spacing:.08em;
+    text-align:center;
+    padding:6px;
+  }
+  .ph-hero{height:420px;background:linear-gradient(160deg,#F6E4DC 0%,#F3E9E2 45%,#EADCE0 100%);position:relative;overflow:hidden;}
+  .ph-hero::before{
+    content:"";position:absolute;width:260px;height:260px;border-radius:50%;
+    background:radial-gradient(circle at 35% 30%, #ffffff 0%, #F0D8C8 55%, transparent 75%);
+    top:60px;left:50%;transform:translateX(-50%);opacity:.9;
+  }
+  .ph-hero .bottle{
+    position:relative;z-index:2;width:88px;height:200px;margin:110px auto 0;
+    background:linear-gradient(180deg,#fff 0%,#F4E9E2 100%);
+    border:1px solid #E3CDBE;border-radius:10px 10px 22px 22px;
+    box-shadow:0 20px 40px rgba(90,60,40,.18);
+  }
+  .ph-hero .bottle::before{
+    content:"";position:absolute;top:-22px;left:50%;transform:translateX(-50%);
+    width:34px;height:26px;background:var(--gold);border-radius:4px;
+  }
+  .ph-ba{height:220px;display:grid;grid-template-columns:1fr 1fr;}
+  .ph-ba div{display:flex;align-items:center;justify-content:center;font-family:var(--serif);font-size:13px;color:rgba(36,28,26,.4);}
+  .ph-ba .before{background:#EDE2DC;}
+  .ph-ba .after{background:linear-gradient(160deg,#FCEFE8,#F6E0DB);}
+  .ph-block{height:180px;background:var(--cream-deep);}
+  .ph-tile{height:120px;background:var(--cream-deep);}
+
+  /* ---- 共通セクション ---- */
+  section{padding:56px 24px;border-bottom:1px solid var(--line);}
+  .eyebrow{
+    font-size:11px;letter-spacing:.22em;color:var(--rose);
+    text-align:center;margin-bottom:10px;font-weight:700;
+  }
+  h1,h2,h3{font-family:var(--serif);font-weight:600;margin:0;}
+  h2{font-size:23px;line-height:1.5;text-align:center;color:var(--ink);margin-bottom:26px;}
+  h2 span{color:var(--rose);}
+  p{color:var(--ink-soft);font-size:14.5px;}
+
+  /* ---- Hero ---- */
+  .hero-copy{padding:34px 24px 10px;text-align:center;}
+  .hero-copy .eyebrow{margin-bottom:14px;}
+  .hero-copy h1{font-size:27px;line-height:1.6;}
+  .hero-copy h1 em{font-style:normal;color:var(--rose);border-bottom:2px solid var(--rose);}
+  .hero-copy .sub{margin-top:14px;font-size:14px;color:var(--ink-soft);}
+
+  /* ---- CTAボタン ---- */
+  .cta{
+    display:block;width:calc(100% - 48px);margin:22px auto 6px;
+    background:var(--rose);color:#fff;text-align:center;
+    padding:18px 12px;border-radius:6px;font-weight:700;font-size:16px;
+    text-decoration:none;letter-spacing:.03em;
+    box-shadow:0 12px 24px rgba(214,69,93,.28);
+    border:none;cursor:pointer;
+    transition:transform .15s ease, box-shadow .15s ease;
+  }
+  .cta:hover{transform:translateY(-2px);box-shadow:0 16px 30px rgba(214,69,93,.34);}
+  .cta small{display:block;font-size:11px;font-weight:400;opacity:.85;margin-top:4px;}
+  .cta.outline{background:transparent;color:var(--rose-deep);border:1.5px solid var(--rose);box-shadow:none;}
+  .cta-note{text-align:center;font-size:11.5px;color:var(--ink-soft);margin-top:2px;}
+
+  /* ---- お悩みリスト ---- */
+  .trouble-list{list-style:none;margin:0;padding:0;display:grid;gap:12px;}
+  .trouble-list li{
+    display:flex;align-items:center;gap:12px;background:var(--cream-deep);
+    border-radius:8px;padding:14px 16px;font-size:14px;color:var(--ink);
+  }
+  .trouble-list li::before{
+    content:"✓";flex:0 0 22px;height:22px;border-radius:50%;
+    background:var(--rose);color:#fff;font-size:12px;
+    display:flex;align-items:center;justify-content:center;
+  }
+
+  /* ---- 特徴グリッド ---- */
+  .feature-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
+  .feature-card{
+    background:var(--white);border:1px solid var(--line);border-radius:10px;
+    padding:16px;text-align:center;
+  }
+  .feature-card .num{font-family:var(--serif);color:var(--gold);font-size:12px;letter-spacing:.1em;}
+  .feature-card h3{font-size:14.5px;margin:8px 0 6px;}
+  .feature-card p{font-size:12.5px;margin:0;}
+
+  /* ---- 成分 ---- */
+  .ingredient{display:flex;gap:16px;align-items:flex-start;margin-bottom:22px;}
+  .ingredient .ph-tile{width:96px;height:96px;flex:0 0 96px;border-radius:50%;}
+  .ingredient h3{font-size:15px;margin-bottom:6px;}
+  .ingredient p{font-size:13px;margin:0;}
+
+  /* ---- お客様の声 ---- */
+  .voice-card{
+    background:var(--cream-deep);border-radius:10px;padding:18px;margin-bottom:14px;
+  }
+  .voice-card .stars{color:var(--gold);font-size:13px;margin-bottom:6px;}
+  .voice-card .who{font-size:12px;color:var(--ink-soft);margin-top:8px;text-align:right;}
+
+  /* ---- 使い方ステップ ---- */
+  .step{display:flex;gap:14px;margin-bottom:20px;}
+  .step .n{
+    flex:0 0 34px;height:34px;border-radius:50%;background:var(--sage);
+    color:#fff;display:flex;align-items:center;justify-content:center;
+    font-family:var(--serif);font-size:14px;
+  }
+  .step h3{font-size:14.5px;margin-bottom:4px;}
+  .step p{font-size:13px;margin:0;}
+
+  /* ---- 料金比較 ---- */
+  .plans{display:grid;gap:14px;}
+  .plan-card{
+    border:2px solid var(--line);border-radius:12px;padding:20px;position:relative;background:var(--white);
+  }
+  .plan-card.reco{border-color:var(--rose);box-shadow:0 14px 30px rgba(214,69,93,.14);}
+  .plan-card.reco::before{
+    content:"一番人気";position:absolute;top:-12px;left:20px;
+    background:var(--rose);color:#fff;font-size:11px;padding:4px 12px;border-radius:20px;font-weight:700;
+  }
+  .plan-card h3{font-size:15px;margin-bottom:8px;}
+  .plan-card .price{font-family:var(--serif);color:var(--rose-deep);font-size:26px;margin:4px 0;}
+  .plan-card .price small{font-size:13px;color:var(--ink-soft);font-family:var(--sans);}
+  .plan-card .strike{color:var(--ink-soft);text-decoration:line-through;font-size:13px;}
+  .plan-card ul{margin:10px 0 0;padding-left:18px;font-size:12.5px;color:var(--ink-soft);}
+
+  /* ---- FAQ ---- */
+  .faq-item{border-bottom:1px solid var(--line);}
+  .faq-q{
+    width:100%;text-align:left;background:none;border:none;padding:16px 4px;
+    font-family:var(--serif);font-size:14.5px;color:var(--ink);
+    display:flex;justify-content:space-between;align-items:center;cursor:pointer;
+  }
+  .faq-q::after{content:"+";color:var(--rose);font-size:18px;transition:transform .2s;}
+  .faq-item.open .faq-q::after{transform:rotate(45deg);}
+  .faq-a{max-height:0;overflow:hidden;transition:max-height .25s ease;font-size:13px;color:var(--ink-soft);}
+  .faq-item.open .faq-a{max-height:200px;padding-bottom:16px;}
+
+  /* ---- 注文フォーム ---- */
+  #order{background:var(--cream-deep);}
+  .form-block{background:var(--white);border-radius:12px;padding:22px 18px;margin-bottom:18px;border:1px solid var(--line);}
+  .form-block h3{
+    font-size:14px;color:var(--rose-deep);margin-bottom:16px;
+    padding-bottom:10px;border-bottom:1px dashed var(--line);
+    display:flex;align-items:center;gap:8px;
+  }
+  .form-block h3 .tag{
+    background:var(--rose);color:#fff;font-size:10px;padding:2px 7px;border-radius:3px;font-weight:700;
+  }
+  .field{margin-bottom:14px;}
+  .field label{display:block;font-size:12.5px;font-weight:700;margin-bottom:6px;color:var(--ink);}
+  .field label .req{color:var(--rose);font-size:10px;margin-left:4px;font-weight:700;}
+  .field input[type=text],
+  .field input[type=email],
+  .field input[type=tel],
+  .field input[type=password],
+  .field select{
+    width:100%;padding:11px 12px;border:1px solid var(--line);border-radius:6px;
+    font-size:14px;font-family:var(--sans);background:#fff;color:var(--ink);
+  }
+  .field input:focus,.field select:focus{outline:2px solid var(--sage);outline-offset:1px;}
+  .row2{display:grid;grid-template-columns:1fr 1fr;gap:10px;}
+  .row3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;}
+
+  .plan-select{display:grid;gap:10px;margin-bottom:4px;}
+  .plan-radio{
+    display:flex;align-items:center;gap:10px;border:2px solid var(--line);
+    border-radius:8px;padding:12px 14px;cursor:pointer;
+  }
+  .plan-radio.checked{border-color:var(--rose);background:#FDF1F3;}
+  .plan-radio .meta{font-size:12px;color:var(--ink-soft);}
+  .plan-radio .meta b{color:var(--rose-deep);font-size:15px;}
+
+  .pay-options{display:grid;gap:8px;}
+  .pay-option{
+    display:flex;align-items:center;gap:10px;border:1.5px solid var(--line);
+    border-radius:8px;padding:12px 14px;cursor:pointer;font-size:13.5px;
+  }
+  .pay-option.checked{border-color:var(--sage);background:#F2F6F3;}
+  .pay-option .badge{
+    margin-left:auto;font-size:10px;background:var(--cream-deep);color:var(--ink-soft);
+    padding:2px 8px;border-radius:10px;
+  }
+  .cc-fields{
+    margin-top:12px;padding-top:12px;border-top:1px dashed var(--line);display:none;
+  }
+  .cc-fields.show{display:block;}
+
+  .cycle-tabs{display:flex;gap:6px;margin-bottom:12px;}
+  .cycle-tabs button{
+    flex:1;padding:9px 4px;border:1px solid var(--line);background:#fff;border-radius:6px;
+    font-size:12px;cursor:pointer;color:var(--ink-soft);
+  }
+  .cycle-tabs button.active{background:var(--sage);color:#fff;border-color:var(--sage);}
+
+  .agree{
+    display:flex;align-items:flex-start;gap:8px;font-size:12px;color:var(--ink-soft);
+    background:var(--white);border-radius:10px;padding:16px;margin-bottom:16px;border:1px solid var(--line);
+  }
+  .agree a{color:var(--rose-deep);text-decoration:underline;}
+
+  .submit-btn{
+    width:100%;background:var(--rose);color:#fff;border:none;padding:18px;
+    font-size:17px;font-weight:700;border-radius:8px;cursor:pointer;
+    box-shadow:0 14px 26px rgba(214,69,93,.3);
+  }
+  .submit-btn:active{transform:translateY(1px);}
+  .form-note{font-size:11px;color:var(--ink-soft);text-align:center;margin-top:10px;}
+
+  .thanks{
+    display:none;text-align:center;background:#fff;border:2px solid var(--sage);
+    border-radius:12px;padding:30px 20px;margin-top:18px;
+  }
+  .thanks.show{display:block;}
+  .thanks h3{color:var(--sage-deep);font-size:18px;margin-bottom:8px;}
+  .thanks .oid{font-family:var(--serif);font-size:14px;color:var(--ink-soft);margin-top:6px;}
+
+  /* ---- フッター ---- */
+  footer{padding:30px 24px 100px;text-align:center;font-size:11.5px;color:var(--ink-soft);background:var(--ink);color:#cfc4bf;}
+  footer a{display:inline-block;margin:0 8px;color:#E9D9CE;text-decoration:none;border-bottom:1px solid rgba(255,255,255,.2);}
+  footer .copy{margin-top:16px;opacity:.6;}
+
+  /* ---- 固定フローティングCTA ---- */
+  .float-cta{
+    position:fixed;left:0;right:0;bottom:0;z-index:40;
+    background:#fff;border-top:1px solid var(--line);
+    padding:10px 14px;display:flex;gap:10px;align-items:center;
+    box-shadow:0 -8px 24px rgba(0,0,0,.08);
+    max-width:640px;margin:0 auto;
+  }
+  .float-cta .info{flex:1;font-size:11.5px;color:var(--ink-soft);}
+  .float-cta .info b{display:block;color:var(--rose-deep);font-size:14px;font-family:var(--serif);}
+  .float-cta button{
+    background:var(--rose);color:#fff;border:none;border-radius:6px;
+    padding:13px 18px;font-size:13.5px;font-weight:700;white-space:nowrap;cursor:pointer;
+  }
+
+  /* ---- POC ライブダッシュボード ---- */
+  .poc-dash{
+    position:fixed;right:12px;bottom:74px;z-index:50;
+    width:220px;background:rgba(36,28,26,.94);color:#fff;
+    border-radius:12px;padding:14px 14px 12px;font-size:11.5px;
+    box-shadow:0 16px 30px rgba(0,0,0,.3);
+    backdrop-filter:blur(4px);
+  }
+  .poc-dash .hd{display:flex;align-items:center;gap:6px;font-weight:700;margin-bottom:10px;letter-spacing:.03em;}
+  .poc-dash .dot{width:7px;height:7px;border-radius:50%;background:#7CF29A;box-shadow:0 0 0 0 rgba(124,242,154,.6);animation:pulse 1.6s infinite;}
+  @keyframes pulse{
+    0%{box-shadow:0 0 0 0 rgba(124,242,154,.55);}
+    70%{box-shadow:0 0 0 8px rgba(124,242,154,0);}
+    100%{box-shadow:0 0 0 0 rgba(124,242,154,0);}
+  }
+  .poc-dash .stats{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:10px;}
+  .poc-dash .stat b{display:block;font-family:var(--serif);font-size:18px;font-variant-numeric:tabular-nums;}
+  .poc-dash .stat span{opacity:.65;font-size:10px;}
+  .poc-dash .feed{max-height:90px;overflow:auto;border-top:1px solid rgba(255,255,255,.15);padding-top:8px;}
+  .poc-dash .feed div{opacity:.85;margin-bottom:4px;font-variant-numeric:tabular-nums;}
+  .poc-dash .foot{margin-top:8px;opacity:.5;font-size:9.5px;line-height:1.4;}
+  .poc-dash .close{
+    position:absolute;top:8px;right:10px;background:none;border:none;color:#fff;opacity:.5;
+    font-size:13px;cursor:pointer;
+  }
+  .poc-dash.collapsed{width:auto;padding:10px 12px;}
+  .poc-dash.collapsed .body{display:none;}
+  .poc-dash .reopen{display:none;}
+  .poc-dash.collapsed .reopen{display:block;cursor:pointer;font-weight:700;}
+
+  @media (max-width:400px){
+    .row3{grid-template-columns:1fr 1fr;}
+    .poc-dash{width:180px;right:8px;}
+  }
+</style>
+</head>
+<body>
+
+<div class="top-bar">🌙 本日23:59まで｜初回<b>65%OFF</b>・全国送料無料（※本ページはPOCデモ用の模擬LPです）</div>
+
+<div class="wrap">
+
+  <!-- ============ HERO ============ -->
+  <div class="ph ph-hero"><div class="bottle"></div></div>
+
+  <div class="hero-copy">
+    <div class="eyebrow">DERMATOLOGIST INSPIRED CARE</div>
+    <h1>肌の内側から、<br><em>翌朝の"ツヤ"</em>を見せつける。</h1>
+    <p class="sub">敏感肌研究から生まれた高浸透美容液<br>LUCE DERMA BRIGHT SERUM</p>
+  </div>
+
+  <div class="ph ph-ba">
+    <div class="before">BEFORE（イメージ）</div>
+    <div class="after">AFTER（イメージ）</div>
+  </div>
+
+  <div style="padding:22px 24px 6px;">
+    <button class="cta" onclick="scrollToOrder('V')">
+      定期便で今すぐ始める
+      <small>初回65%OFF ¥1,980（税込）送料無料</small>
+    </button>
+    <button class="cta outline" onclick="scrollToOrder('P')">単品購入はこちら（¥8,980）</button>
+    <p class="cta-note">全国 65,000店舗のコンビニ払い／各種アプリ決済にも対応</p>
+  </div>
+
+  <!-- ============ お悩み ============ -->
+  <section>
+    <div class="eyebrow">01 / お悩み</div>
+    <h2>こんな"揺らぎ"、<br>諦めていませんか？</h2>
+    <ul class="trouble-list">
+      <li>季節の変わり目に肌がゴワつく</li>
+      <li>メイクのりが安定しない</li>
+      <li>鏡の中の"くすみ"が気になる</li>
+      <li>いろいろ試したけど続かなかった</li>
+    </ul>
+  </section>
+
+  <!-- ============ 解決策 ============ -->
+  <section>
+    <div class="eyebrow">02 / 解決策</div>
+    <h2>だから私たちは、<br><span>5つの美容成分</span>を凝縮しました。</h2>
+    <div class="ph ph-block">CONCEPT VISUAL（差し替え想定）</div>
+    <div class="feature-grid" style="margin-top:18px;">
+      <div class="feature-card"><div class="num">01</div><h3>高浸透設計</h3><p>角層のすみずみまで、うるおいを届ける処方。</p></div>
+      <div class="feature-card"><div class="num">02</div><h3>低刺激設計</h3><p>敏感肌もやさしく使える処方設計。</p></div>
+      <div class="feature-card"><div class="num">03</div><h3>もちもち感</h3><p>翌朝の肌ざわりの変化を実感しやすい設計。</p></div>
+      <div class="feature-card"><div class="num">04</div><h3>時短ケア</h3><p>これ1本でスキンケアが完結。</p></div>
+    </div>
+  </section>
+
+  <!-- ============ 受賞・メディア ============ -->
+  <section style="padding-top:40px;padding-bottom:40px;">
+    <div class="ph ph-tile">MEDIA / AWARD LOGOS（差し替え想定）</div>
+  </section>
+
+  <!-- ============ 成分 ============ -->
+  <section>
+    <div class="eyebrow">03 / 成分</div>
+    <h2>注目の2大成分</h2>
+    <div class="ingredient">
+      <div class="ph ph-tile"></div>
+      <div><h3>ダーマコンプレックスEX（仮）</h3><p>研究段階から着目してきた保湿複合成分。うるおいを抱え込む肌印象へ。</p></div>
+    </div>
+    <div class="ingredient">
+      <div class="ph ph-tile"></div>
+      <div><h3>ルーセントベリー抽出物（仮）</h3><p>透明感のある印象をサポートする植物由来成分。</p></div>
+    </div>
+  </section>
+
+  <!-- ============ お客様の声 ============ -->
+  <section>
+    <div class="eyebrow">04 / VOICE</div>
+    <h2>使い続けている方の声</h2>
+    <div class="voice-card">
+      <div class="stars">★★★★★</div>
+      <p>朝の肌の手ざわりが変わった気がします。化粧のりも良くなりました。</p>
+      <div class="who">30代・東京都 K様（個人の感想です）</div>
+    </div>
+    <div class="voice-card">
+      <div class="stars">★★★★★</div>
+      <p>これ1本で済むので、忙しい朝でもケアを続けられています。</p>
+      <div class="who">40代・大阪府 M様（個人の感想です）</div>
+    </div>
+    <div class="voice-card">
+      <div class="stars">★★★★☆</div>
+      <p>香りが優しくて使うたびにリラックスできます。定期便で続けています。</p>
+      <div class="who">20代・福岡県 S様（個人の感想です）</div>
+    </div>
+  </section>
+
+  <!-- ============ 使い方 ============ -->
+  <section>
+    <div class="eyebrow">05 / HOW TO USE</div>
+    <h2>使い方はシンプル、3ステップ</h2>
+    <div class="step"><div class="n">1</div><div><h3>洗顔後、化粧水の前に</h3><p>清潔な肌に適量をなじませます。</p></div></div>
+    <div class="step"><div class="n">2</div><div><h3>気になる部分に重ねづけ</h3><p>乾燥が気になる部分にはやさしく重ねてください。</p></div></div>
+    <div class="step"><div class="n">3</div><div><h3>いつものケアへ</h3><p>その後は普段のスキンケアで仕上げます。</p></div></div>
+  </section>
+
+  <!-- ============ FAQ ============ -->
+  <section>
+    <div class="eyebrow">06 / FAQ</div>
+    <h2>よくあるご質問</h2>
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">Q. どのくらいの期間で使い切りますか？</button>
+      <div class="faq-a">一般的な使用量で約1ヶ月を目安にお使いいただけます。</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">Q. 定期便はいつでも解約できますか？</button>
+      <div class="faq-a">次回発送日の10日前までにご連絡いただければ、休止・解約が可能です（本ページ下部の注意事項をご確認ください）。</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">Q. 敏感肌でも使えますか？</button>
+      <div class="faq-a">低刺激処方でテストを行っておりますが、肌に合わない場合は使用を中止し、専門機関にご相談ください。</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">Q. 支払い方法は何がありますか？</button>
+      <div class="faq-a">クレジットカード、Amazon Pay、NP後払い、atone、翌月払い（コンビニ／口座振替）などからお選びいただけます。</div>
+    </div>
+  </section>
+
+  <!-- ============ 料金プラン ============ -->
+  <section>
+    <div class="eyebrow">07 / PRICE</div>
+    <h2>お得なのは<span>定期コース</span></h2>
+    <div class="plans">
+      <div class="plan-card reco">
+        <h3>定期コース（V）</h3>
+        <div class="strike">通常価格 ¥8,980</div>
+        <div class="price">¥1,980<small>（税込・初回）</small></div>
+        <p style="font-size:12px;margin:0;">2回目以降 ¥6,980／回・送料無料</p>
+        <ul><li>いつでも休止・解約OK</li><li>お届け周期の変更が可能</li><li>会員限定特典つき</li></ul>
+      </div>
+      <div class="plan-card">
+        <h3>単品購入（P）</h3>
+        <div class="price">¥8,980<small>（税込）</small></div>
+        <p style="font-size:12px;margin:0;">送料 ¥660／1回のみのお届け</p>
+        <ul><li>まずは1本だけ試したい方向け</li></ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ ご注文フォーム ============ -->
+  <section id="order">
+    <div class="eyebrow">08 / ORDER</div>
+    <h2>お申し込みはこちらから</h2>
+
+    <button class="cta outline" type="button" style="background:#fff;">Amazonアカウントで簡単お申込み</button>
+    <p class="cta-note">Amazonに登録済みの住所・お支払い情報をそのまま使用できます</p>
+
+    <form id="orderForm" onsubmit="handleSubmit(event)" style="margin-top:22px;">
+
+      <!-- プラン選択 -->
+      <div class="form-block">
+        <h3><span class="tag">STEP 1</span>プランを選択</h3>
+        <div class="plan-select">
+          <label class="plan-radio checked" data-plan-radio="V">
+            <input type="radio" name="plan" value="V" checked onchange="onPlanChange(this)">
+            <div class="meta">定期コース（V）<br><b>¥1,980</b>（初回・税込）／2回目以降¥6,980</div>
+          </label>
+          <label class="plan-radio" data-plan-radio="P">
+            <input type="radio" name="plan" value="P" onchange="onPlanChange(this)">
+            <div class="meta">単品購入（P）<br><b>¥8,980</b>（税込）</div>
+          </label>
+        </div>
+      </div>
+
+      <!-- お客様情報 -->
+      <div class="form-block">
+        <h3><span class="tag">STEP 2</span>お客様情報のご入力</h3>
+        <div class="row2">
+          <div class="field"><label>お名前<span class="req">必須</span></label><input type="text" required placeholder="例）田中 花子"></div>
+          <div class="field"><label>フリガナ<span class="req">必須</span></label><input type="text" required placeholder="例）タナカ ハナコ"></div>
+        </div>
+        <div class="field"><label>郵便番号<span class="req">必須</span></label><input type="text" required placeholder="〒000-0000"></div>
+        <div class="field">
+          <label>都道府県<span class="req">必須</span></label>
+          <select required>
+            <option value="">選択してください</option>
+            <option>北海道</option><option>東京都</option><option>大阪府</option><option>福岡県</option><option>愛知県</option><option>その他</option>
+          </select>
+        </div>
+        <div class="field"><label>住所1（市区町村）<span class="req">必須</span></label><input type="text" required></div>
+        <div class="field"><label>住所2（番地・建物名）<span class="req">必須</span></label><input type="text" required></div>
+        <div class="row2">
+          <div class="field"><label>電話番号<span class="req">必須</span></label><input type="tel" required></div>
+          <div class="field"><label>メールアドレス<span class="req">必須</span></label><input type="email" id="emailField" required></div>
+        </div>
+        <div class="field"><label>パスワード（会員登録用）<span class="req">必須</span></label><input type="password" required minlength="4"></div>
+      </div>
+
+      <!-- お届け先情報 -->
+      <div class="form-block">
+        <h3><span class="tag">STEP 3</span>お届け先情報</h3>
+        <div class="field">
+          <label>お届け先住所</label>
+          <select><option>上記住所と同じ</option><option>新しく入力する</option></select>
+        </div>
+      </div>
+
+      <!-- お支払い情報 -->
+      <div class="form-block">
+        <h3><span class="tag">STEP 4</span>お支払い情報</h3>
+        <div class="field">
+          <label>お支払い方法<span class="req">必須</span></label>
+          <div class="pay-options" id="payOptions">
+            <label class="pay-option checked" data-pay="np"><input type="radio" name="pay" value="np" checked onchange="onPayChange(this)">NP後払い（リアルタイム）<span class="badge">コンビニ払い可</span></label>
+            <label class="pay-option" data-pay="cc"><input type="radio" name="pay" value="cc" onchange="onPayChange(this)">クレジットカード一括（wiz）<span class="badge">主要ブランド対応</span></label>
+            <label class="pay-option" data-pay="amazon"><input type="radio" name="pay" value="amazon" onchange="onPayChange(this)">Amazon Pay<span class="badge">入力不要</span></label>
+            <label class="pay-option" data-pay="atone"><input type="radio" name="pay" value="atone" onchange="onPayChange(this)">atone（翌月あと払い）</label>
+            <label class="pay-option" data-pay="deferred"><input type="radio" name="pay" value="deferred" onchange="onPayChange(this)">翌月払い（コンビニ／口座振替）</label>
+          </div>
+        </div>
+
+        <div class="cc-fields" id="ccFields">
+          <div class="field">
+            <label>お支払い回数<span class="req">必須</span></label>
+            <select><option>一括</option><option>3回</option><option>6回</option><option>12回</option></select>
+          </div>
+          <div class="field"><label>クレジットカード番号<span class="req">必須</span></label><input type="text" placeholder="数字のみで続けて入力してください"></div>
+          <div class="row3">
+            <div class="field"><label>有効期限（月）</label><select><option>01</option><option>06</option><option>12</option></select></div>
+            <div class="field"><label>有効期限（年）</label><select><option>26</option><option>27</option><option>28</option></select></div>
+            <div class="field"><label>セキュリティコード</label><input type="text" placeholder="下3〜4桁"></div>
+          </div>
+          <div class="field"><label>カードの名義人</label><input type="text" placeholder="例）TANAKA HANAKO"></div>
+        </div>
+      </div>
+
+      <!-- お届けサイクル -->
+      <div class="form-block" id="cycleBlock">
+        <h3><span class="tag">STEP 5</span>お届けサイクルの指定（定期便）</h3>
+        <div class="cycle-tabs">
+          <button type="button" class="active" onclick="setCycleTab(this)">日付で指定</button>
+          <button type="button" onclick="setCycleTab(this)">間隔で指定</button>
+          <button type="button" onclick="setCycleTab(this)">曜日で指定</button>
+        </div>
+        <div class="field">
+          <label>お届け周期</label>
+          <select>
+            <option>1ヶ月ごと</option><option>2ヶ月ごと</option><option>3ヶ月ごと</option>
+          </select>
+        </div>
+        <div class="field">
+          <label>お届け希望日</label>
+          <select>
+            <option>指定なし</option><option>2026-07-25</option><option>2026-08-05</option><option>2026-08-15</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- 同意 -->
+      <label class="agree">
+        <input type="checkbox" required style="margin-top:2px;">
+        <span><a href="#" onclick="return false;">利用規約</a>に同意して申込みます。未成年者については法定代理人の同意を得ていることを確認します。</span>
+      </label>
+
+      <button type="submit" class="submit-btn">この内容で申し込む（POCデモ）</button>
+      <p class="form-note">
+        2回目以降のご解約・休止をご希望のお客様は次回発送日の10日前までにお電話でご連絡ください。<br>
+        ※本フォームはPOCデモ用です。実際の決済・出荷は発生しません。
+      </p>
+
+      <div class="thanks" id="thanksBox">
+        <h3>ご注文ありがとうございました</h3>
+        <p style="margin:0;">仮想の注文データがPOC計測基盤にリアルタイムで反映されました。</p>
+        <div class="oid" id="orderIdText"></div>
+      </div>
+    </form>
+  </section>
+
+  <footer>
+    <a href="#" onclick="return false;">会社概要</a>
+    <a href="#" onclick="return false;">特定商取引法に基づく表示</a>
+    <a href="#" onclick="return false;">プライバシーポリシー</a>
+    <div class="copy">© LUCE公式ショップ（POCデモ／架空ブランド）</div>
+  </footer>
+</div>
+
+<!-- ============ 固定フローティングCTA ============ -->
+<div class="float-cta">
+  <div class="info">初回65%OFF<br><b id="floatPrice">¥1,980（税込）</b></div>
+  <button onclick="scrollToOrder()">お申し込みへ進む</button>
+</div>
+
+<!-- ============ POC リアルタイムダッシュボード ============ -->
+<div class="poc-dash" id="pocDash">
+  <button class="close" onclick="toggleDash()">−</button>
+  <div class="hd"><span class="dot"></span>リアルタイム申込状況<span class="reopen" onclick="toggleDash()">POC</span></div>
+  <div class="body">
+    <div class="stats">
+      <div class="stat"><b id="statToday">0</b><span>本日の申込</span></div>
+      <div class="stat"><b id="statTotal">0</b><span>累計申込</span></div>
+    </div>
+    <div class="feed" id="statFeed"></div>
+    <div class="foot">この数値はPOC用の共有ストレージに保存され、全ユーザー間でリアルタイムに反映されます。</div>
+  </div>
+</div>
+
+<script>
+/* ---------------- 基本UI挙動 ---------------- */
+function scrollToOrder(plan){
+  if(plan){
+    document.querySelectorAll('[data-plan-radio]').forEach(function(el){
+      var input = el.querySelector('input');
+      var match = el.getAttribute('data-plan-radio') === plan;
+      input.checked = match;
+      el.classList.toggle('checked', match);
+    });
+    onPlanChange(document.querySelector('[data-plan-radio="'+plan+'"] input'));
+  }
+  document.getElementById('order').scrollIntoView({behavior:'smooth'});
+}
+
+function onPlanChange(input){
+  document.querySelectorAll('[data-plan-radio]').forEach(function(el){
+    el.classList.toggle('checked', el.querySelector('input').checked);
+  });
+  var price = input.value === 'V' ? '¥1,980（税込）' : '¥8,980（税込）';
+  document.getElementById('floatPrice').textContent = price;
+  document.getElementById('cycleBlock').style.display = input.value === 'V' ? 'block' : 'none';
+}
+
+function onPayChange(input){
+  document.querySelectorAll('#payOptions .pay-option').forEach(function(el){
+    el.classList.toggle('checked', el.querySelector('input').checked);
+  });
+  document.getElementById('ccFields').classList.toggle('show', input.value === 'cc');
+}
+
+function toggleFaq(btn){
+  btn.parentElement.classList.toggle('open');
+}
+
+function setCycleTab(btn){
+  btn.parentElement.querySelectorAll('button').forEach(function(b){b.classList.remove('active');});
+  btn.classList.add('active');
+}
+
+function toggleDash(){
+  document.getElementById('pocDash').classList.toggle('collapsed');
+}
+
+/* ---------------- POC: 注文送信 & ストレージ反映 ---------------- */
+function planLabel(v){ return v === 'V' ? '定期コース(V) 初回' : '単品購入(P)'; }
+function planAmount(v){ return v === 'V' ? 1980 : 8980; }
+function payLabel(v){
+  return {np:'NP後払い', cc:'クレジットカード', amazon:'Amazon Pay', atone:'atone', deferred:'翌月払い'}[v] || v;
+}
+
+async function handleSubmit(e){
+  e.preventDefault();
+  var form = e.target;
+  var plan = form.querySelector('input[name=plan]:checked').value;
+  var pay = form.querySelector('input[name=pay]:checked').value;
+  var pref = form.querySelector('select').value || '未選択';
+
+  var order = {
+    id: 'POC-' + Date.now().toString(36).toUpperCase(),
+    ts: Date.now(),
+    plan: plan,
+    planLabel: planLabel(plan),
+    amount: planAmount(plan),
+    pay: pay,
+    payLabel: payLabel(pay),
+    pref: pref
+  };
+
+  try{
+    await saveOrder(order);
+  }catch(err){
+    console.error('注文の保存に失敗しました', err);
+  }
+
+  document.getElementById('orderIdText').textContent = '注文番号：' + order.id;
+  document.getElementById('thanksBox').classList.add('show');
+  document.getElementById('thanksBox').scrollIntoView({behavior:'smooth', block:'center'});
+  form.querySelector('.submit-btn').disabled = true;
+  form.querySelector('.submit-btn').textContent = 'お申し込みが完了しました';
+
+  refreshDashboard();
+}
+
+var STORAGE_KEY = 'lp_poc_derma5:orders';
+
+async function loadOrders(){
+  try{
+    var res = await window.storage.get(STORAGE_KEY, true);
+    if(res && res.value){
+      return JSON.parse(res.value);
+    }
+    return [];
+  }catch(err){
+    return [];
+  }
+}
+
+async function saveOrder(order){
+  var orders = await loadOrders();
+  orders.unshift(order);
+  if(orders.length > 50){ orders = orders.slice(0, 50); }
+  await window.storage.set(STORAGE_KEY, JSON.stringify(orders), true);
+}
+
+function isToday(ts){
+  var d = new Date(ts), n = new Date();
+  return d.getFullYear() === n.getFullYear() && d.getMonth() === n.getMonth() && d.getDate() === n.getDate();
+}
+
+function maskPref(pref){
+  return (pref && pref !== '未選択') ? pref : '地域未選択';
+}
+
+async function refreshDashboard(){
+  var orders = await loadOrders();
+  var today = orders.filter(function(o){ return isToday(o.ts); }).length;
+  document.getElementById('statToday').textContent = today;
+  document.getElementById('statTotal').textContent = orders.length;
+
+  var feed = document.getElementById('statFeed');
+  feed.innerHTML = '';
+  orders.slice(0, 6).forEach(function(o){
+    var t = new Date(o.ts);
+    var hh = String(t.getHours()).padStart(2,'0');
+    var mm = String(t.getMinutes()).padStart(2,'0');
+    var row = document.createElement('div');
+    row.textContent = hh+':'+mm+' '+maskPref(o.pref)+' / '+o.planLabel+' / '+o.payLabel;
+    feed.appendChild(row);
+  });
+  if(orders.length === 0){
+    feed.innerHTML = '<div style="opacity:.5;">まだ申込データがありません</div>';
+  }
+}
+
+refreshDashboard();
+setInterval(refreshDashboard, 4000);
+</script>
+</body>
+</html>
