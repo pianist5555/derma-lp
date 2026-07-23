@@ -47,23 +47,14 @@
   .top-bar b{color:#F3C9A0;}
 
   /* ---- 商品画像 ---- */
-  .ph{
-    display:flex;align-items:center;justify-content:center;
-    color:rgba(36,28,26,0.35);
-    font-family:var(--serif);
-    font-size:13px;
-    letter-spacing:.08em;
-    text-align:center;
-    padding:6px;
-    background:#fff url(product.jpg) center/contain no-repeat;
-  }
+  .ph{object-fit:contain;background:#fff;}
   .ph-hero{height:420px;}
-  .ph-ba{height:220px;display:grid;grid-template-columns:1fr 1fr;padding:0;}
-  .ph-ba div{
-    display:flex;align-items:flex-end;justify-content:center;
+  .ph-ba{height:220px;display:grid;grid-template-columns:1fr 1fr;}
+  .ph-ba > div{
+    display:flex;flex-direction:column;align-items:center;justify-content:flex-end;
     font-family:var(--serif);font-size:13px;color:rgba(36,28,26,.4);
-    background:#fff url(product.jpg) center/contain no-repeat;
   }
+  .ph-ba img{height:186px;}
   .ph-block{height:180px;}
   .ph-tile{height:120px;}
 
@@ -306,7 +297,7 @@
 <div class="wrap">
 
   <!-- ============ HERO ============ -->
-  <div class="ph ph-hero"></div>
+  <img class="ph ph-hero" src="product.jpg" alt="LUCE DERMA BRIGHT SERUM 商品画像">
 
   <div class="hero-copy">
     <div class="eyebrow">DERMATOLOGIST INSPIRED CARE</div>
@@ -314,9 +305,9 @@
     <p class="sub">敏感肌研究から生まれた高浸透美容液<br>LUCE DERMA BRIGHT SERUM</p>
   </div>
 
-  <div class="ph ph-ba">
-    <div class="before">BEFORE（イメージ）</div>
-    <div class="after">AFTER（イメージ）</div>
+  <div class="ph-ba">
+    <div class="before"><img class="ph" src="product.jpg" alt="使用前イメージ">BEFORE（イメージ）</div>
+    <div class="after"><img class="ph" src="product.jpg" alt="使用後イメージ">AFTER（イメージ）</div>
   </div>
 
   <div style="padding:22px 24px 6px;">
@@ -344,7 +335,7 @@
   <section>
     <div class="eyebrow">02 / 解決策</div>
     <h2>だから私たちは、<br><span>5つの美容成分</span>を凝縮しました。</h2>
-    <div class="ph ph-block"></div>
+    <img class="ph ph-block" src="product.jpg" alt="コンセプトビジュアル">
     <div class="feature-grid" style="margin-top:18px;">
       <div class="feature-card"><div class="num">01</div><h3>高浸透設計</h3><p>角層のすみずみまで、うるおいを届ける処方。</p></div>
       <div class="feature-card"><div class="num">02</div><h3>低刺激設計</h3><p>敏感肌もやさしく使える処方設計。</p></div>
@@ -355,7 +346,7 @@
 
   <!-- ============ 受賞・メディア ============ -->
   <section style="padding-top:40px;padding-bottom:40px;">
-    <div class="ph ph-tile"></div>
+    <img class="ph ph-tile" src="product.jpg" alt="メディア掲載・受賞">
   </section>
 
   <!-- ============ 成分 ============ -->
@@ -363,11 +354,11 @@
     <div class="eyebrow">03 / 成分</div>
     <h2>注目の2大成分</h2>
     <div class="ingredient">
-      <div class="ph ph-tile"></div>
+      <img class="ph ph-tile" src="product.jpg" alt="ダーマコンプレックスEX">
       <div><h3>ダーマコンプレックスEX（仮）</h3><p>研究段階から着目してきた保湿複合成分。うるおいを抱え込む肌印象へ。</p></div>
     </div>
     <div class="ingredient">
-      <div class="ph ph-tile"></div>
+      <img class="ph ph-tile" src="product.jpg" alt="ルーセントベリー抽出物">
       <div><h3>ルーセントベリー抽出物（仮）</h3><p>透明感のある印象をサポートする植物由来成分。</p></div>
     </div>
   </section>
