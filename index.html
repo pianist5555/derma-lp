@@ -46,7 +46,7 @@
   }
   .top-bar b{color:#F3C9A0;}
 
-  /* ---- プレースホルダー画像 ---- */
+  /* ---- 商品画像 ---- */
   .ph{
     display:flex;align-items:center;justify-content:center;
     color:rgba(36,28,26,0.35);
@@ -55,29 +55,17 @@
     letter-spacing:.08em;
     text-align:center;
     padding:6px;
+    background:#fff url(product.jpg) center/contain no-repeat;
   }
-  .ph-hero{height:420px;background:linear-gradient(160deg,#F6E4DC 0%,#F3E9E2 45%,#EADCE0 100%);position:relative;overflow:hidden;}
-  .ph-hero::before{
-    content:"";position:absolute;width:260px;height:260px;border-radius:50%;
-    background:radial-gradient(circle at 35% 30%, #ffffff 0%, #F0D8C8 55%, transparent 75%);
-    top:60px;left:50%;transform:translateX(-50%);opacity:.9;
+  .ph-hero{height:420px;}
+  .ph-ba{height:220px;display:grid;grid-template-columns:1fr 1fr;padding:0;}
+  .ph-ba div{
+    display:flex;align-items:flex-end;justify-content:center;
+    font-family:var(--serif);font-size:13px;color:rgba(36,28,26,.4);
+    background:#fff url(product.jpg) center/contain no-repeat;
   }
-  .ph-hero .bottle{
-    position:relative;z-index:2;width:88px;height:200px;margin:110px auto 0;
-    background:linear-gradient(180deg,#fff 0%,#F4E9E2 100%);
-    border:1px solid #E3CDBE;border-radius:10px 10px 22px 22px;
-    box-shadow:0 20px 40px rgba(90,60,40,.18);
-  }
-  .ph-hero .bottle::before{
-    content:"";position:absolute;top:-22px;left:50%;transform:translateX(-50%);
-    width:34px;height:26px;background:var(--gold);border-radius:4px;
-  }
-  .ph-ba{height:220px;display:grid;grid-template-columns:1fr 1fr;}
-  .ph-ba div{display:flex;align-items:center;justify-content:center;font-family:var(--serif);font-size:13px;color:rgba(36,28,26,.4);}
-  .ph-ba .before{background:#EDE2DC;}
-  .ph-ba .after{background:linear-gradient(160deg,#FCEFE8,#F6E0DB);}
-  .ph-block{height:180px;background:var(--cream-deep);}
-  .ph-tile{height:120px;background:var(--cream-deep);}
+  .ph-block{height:180px;}
+  .ph-tile{height:120px;}
 
   /* ---- 共通セクション ---- */
   section{padding:56px 24px;border-bottom:1px solid var(--line);}
@@ -318,7 +306,7 @@
 <div class="wrap">
 
   <!-- ============ HERO ============ -->
-  <div class="ph ph-hero"><div class="bottle"></div></div>
+  <div class="ph ph-hero"></div>
 
   <div class="hero-copy">
     <div class="eyebrow">DERMATOLOGIST INSPIRED CARE</div>
@@ -356,7 +344,7 @@
   <section>
     <div class="eyebrow">02 / 解決策</div>
     <h2>だから私たちは、<br><span>5つの美容成分</span>を凝縮しました。</h2>
-    <div class="ph ph-block">CONCEPT VISUAL（差し替え想定）</div>
+    <div class="ph ph-block"></div>
     <div class="feature-grid" style="margin-top:18px;">
       <div class="feature-card"><div class="num">01</div><h3>高浸透設計</h3><p>角層のすみずみまで、うるおいを届ける処方。</p></div>
       <div class="feature-card"><div class="num">02</div><h3>低刺激設計</h3><p>敏感肌もやさしく使える処方設計。</p></div>
@@ -367,7 +355,7 @@
 
   <!-- ============ 受賞・メディア ============ -->
   <section style="padding-top:40px;padding-bottom:40px;">
-    <div class="ph ph-tile">MEDIA / AWARD LOGOS（差し替え想定）</div>
+    <div class="ph ph-tile"></div>
   </section>
 
   <!-- ============ 成分 ============ -->
